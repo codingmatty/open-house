@@ -1,0 +1,12 @@
+.toast {
+  background-color: teal;
+  color: white;
+  display: none;
+  padding: 12px;
+  position: fixed;
+  right: 12px;
+  top: 12px;
+}
+.toast.open {
+  display: block;
+}

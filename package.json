@@ -1,0 +1,32 @@
+{
+  "name": "open-house",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "pouchdb": "^6.2.0",
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4",
+    "react-autobind": "^1.0.6",
+    "react-dom": "^15.5.4"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.6"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "NODE_ENV=production npm run build",
+    "deploy": "now ./build --name open-house"
+  },
+  "now": {
+    "name": "open-house",
+    "type": "static",
+    "files": [
+      "build"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+.contacts-list {
+  background-color: rgba(235,235,235,0.9);
+  bottom: 0;
+  left: -30%;
+  padding: 12px 6px;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  transition: left 1.5s;
+  width: 30%;
+  z-index: 10;
+}
+.contacts-list.open {
+  left: 0;
+}
+
+.contacts-list .toggle-visibility {
+  background-color: rgba(235,235,235,0.9);
+  border-radius: 0;
+  border-bottom-right-radius: 6px;
+  border-top-right-radius: 6px;
+  border: none;
+  left: 100%;
+  outline: none;
+  padding: 6px;
+  position: absolute;
+  bottom: 12px;
+}
+.contacts-list .toggle-visibility::before {
+  content: '>';
+  color: #333;
+}
+.contacts-list.open .toggle-visibility::before {
+  content: '<';
+}
+
+.contacts-container {
+  height: calc(100% - 40px);
+  margin: 6px 0;
+  overflow: auto;
+  border-radius: 6px;
+  padding: 6px;
+  border: 1px solid rgba(200,200,200,1);
+}
+
+.contact + .contact {
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(200,200,200,1);
+}
+
+.contact {
+  display: flex;
+}
+
+.contact-data {
+  flex-grow: 1;
+  max-width: calc(100% - 50px);
+}
+
+.contact-notes {
+  align-self: center;
+}
+.contact-notes .edit-notes {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+}
+.contact-notes .edit-notes::before {
+  content: '\01F5D2';
+  font-size: 24px;
+}
+
+.contact-data-point {
+  display: flex;
+  justify-content: space-between;
+}
+.contact-data-point .value {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

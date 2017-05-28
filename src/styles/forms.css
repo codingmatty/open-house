@@ -1,0 +1,66 @@
+.input-group + .input-group,
+.input-group + .button-group {
+  margin-top: 12px;
+}
+
+.input-group label {
+  display: block;
+  margin: 6px;
+  text-align: left;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"],
+.input-group textarea {
+  border-radius: 6px;
+  border: 1px solid #333;
+  box-sizing: border-box;
+  padding: 6px;
+  resize: none;
+  width: 100%;
+}
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  height: 30px;
+}
+
+label.styled-radio-button {
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30%;
+}
+label.styled-radio-button input[type="radio"] {
+  visibility: hidden;
+  position: absolute;
+  left: -9999999px;
+}
+label.styled-radio-button .styled {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: lightgray;
+  margin-right: 12px;
+  border-radius: 6px;
+}
+label.styled-radio-button input:checked + .styled:after {
+  content: '';
+  display: block;
+  height: 9px;
+  width: 18px;
+  margin: 6px 5px;
+  border-left: 3px solid gray;
+  border-bottom: 3px solid gray;
+  transform: rotate(-45deg);
+}
+
+.button-group {
+  text-align: center;
+}
+.button-group button + button {
+  margin-left: 12px;
+}
